@@ -208,8 +208,8 @@ class get_music:
 
 
 if __name__ == '__main__':
-    a = get_music()
-    a.run_etl()
+    music = get_music()
+    music.run_etl()
 # a.data_validation(a.get_lists_of_artists())
 # a.data_validation(a.get_lists_of_songs())
 # a.data_validation(a.get_lists_of_albums())
