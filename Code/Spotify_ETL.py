@@ -20,8 +20,8 @@ class get_music:
    
 
     def get_response(self):
-        spotify_user_id = "e3c7f163ac5e4e4a9e6e6f6d8ebae7a0"
-        spotify_token = 'BQDGXw2LpeRrCWJ3TuyV5c-Iby9I65Jbz5JpqCqgXfgzdjI2392LEABndOHzs8RgoPugdf-cOaAb8qe_T8TeDXGLRSvzJPZVzgkxc0KaLw5F_SVhw3X0URNfJ0SP-3GF-LVsUR5UZ1ca4jouOHHXBYTLX6_NORCP_qQO'
+        spotify_user_id = 
+        spotify_token = 
         headers = {
         "Accept" : "application/json",
         "Content-Type" : "application/json",
@@ -149,8 +149,8 @@ class get_music:
     
     def connect_to_s3(self):
         client_s3 = boto3.client('s3',
-        aws_access_key_id = 'AKIA3CM7NVCYWL7PZFUH',
-        aws_secret_access_key = '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')
+        aws_access_key_id = ''
+        aws_secret_access_key = ' ')
         return client_s3
 
     def load_song(self,songs):
