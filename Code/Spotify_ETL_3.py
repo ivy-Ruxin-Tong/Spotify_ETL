@@ -32,7 +32,7 @@ class GetRecentlyPlayedSongs:
         redirect_url =self.redirect_url
         # refresh_token = (self.request_token())
         client_creds_b64 = base64.b64encode(self.client_creds.encode())
-        refresh_token = 'AQBs5nX0s6-V_SJvccdgG1JnWsY0Q9SSOM76dGLJvQV2aiYkPqJpClT2o1Dc5QdBJeGJklz0USsvWTIHKoocYgJ2CL1j5zZGmVu_89GhlMrOkDoVXi1RMKmAuGNQOjubYPw'
+        refresh_token = ''
         request_url = "https://accounts.spotify.com/api/token"
         
         request_data = {
@@ -258,6 +258,6 @@ class GetRecentlyPlayedSongs:
  
 
 #if '__name__' == '__main__':
-a= GetRecentlyPlayedSongs(user_initials = 'IT', client_user_id = "e3c7f163ac5e4e4a9e6e6f6d8ebae7a0",
-        client_secret = "628d5e2bf9e445069371115dc6080a0a")
+a= GetRecentlyPlayedSongs(user_initials = 'xx', client_user_id = "xxx",
+        client_secret = "xxx")
 a.run_etl_s3()
