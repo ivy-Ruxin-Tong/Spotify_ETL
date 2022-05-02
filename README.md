@@ -2,6 +2,12 @@
 
 Ongoing Project - ETL Process
 
-next step 
-Apache Airflow to schedule the pipeline
-Move S3 to RedShift, and have data vidualization for QuickSight
+## Step 0: Data Ingestion / Process / Storage
+- Pull song/album/artists data using Spotify API
+- Process/Clean Data
+- Load data into s3
+
+## Step 1: Python Script Scheduled Execution
+
+- Use AWS Lambds to run python script daily
+
