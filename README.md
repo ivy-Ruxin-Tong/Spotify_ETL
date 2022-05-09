@@ -9,5 +9,10 @@ Ongoing Project - ETL Process
 
 ## Step 1: Python Script Scheduled Execution
 
-- Use AWS Lambds to run python script daily
+- Use AWS Lambds to run python script daily at 5pm
+
+## Step 2: Query S3 data with AWS Athena
+- Use AWS Athena to query S3 data
+
+## Step 3: Data Visualization with Quicksight
 
