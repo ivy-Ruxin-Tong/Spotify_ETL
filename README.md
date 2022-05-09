@@ -53,5 +53,18 @@ WITH SERDEPROPERTIES (
   'field.delim' = ','
 ) LOCATION 's3://spotifyrecord/time/'
 TBLPROPERTIES ('has_encrypted_data'='false',"skip.header.line.count"="1");
+- CREATE EXTERNAL TABLE IF NOT EXISTS `spotify_analysis`.`album` (
+  `album_id` string,
+  `album_name` string,
+  `album_type` string,
+  `album_release_date` string,
+  `album_total_tracks` int
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe' 
+WITH SERDEPROPERTIES (
+  'serialization.format' = ',',
+  'field.delim' = ','
+) LOCATION 's3://spotifyrecord/albums/'
+TBLPROPERTIES ('has_encrypted_data'='false',"skip.header.line.count"="1");
 ## Step 3: Data Visualization with Quicksight
 
