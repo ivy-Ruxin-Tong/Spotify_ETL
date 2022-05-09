@@ -41,7 +41,7 @@ WITH SERDEPROPERTIES (
 TBLPROPERTIES ('has_encrypted_data'='false',"skip.header.line.count"="1");
 - CREATE EXTERNAL TABLE IF NOT EXISTS `spotify_analysis`.`time` (
   `song_played_at` string,
-  `song_played_date` date,
+  `song_played_date` string,
   `month` int,
   `day` int,
   `week_number` int,
