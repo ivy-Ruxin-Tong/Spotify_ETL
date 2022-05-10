@@ -89,4 +89,6 @@ join album using (album_id)
 join artist using (artist_id)
 join time using (song_played_at)
 ## Step 3: Data Visualization with Quicksight
+<img width="891" alt="Screen Shot 2022-05-09 at 20 31 05" src="https://user-images.githubusercontent.com/46492171/167537221-232e4b3b-2bdd-467d-8bd0-035be409c374.png">
+
 
