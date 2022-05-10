@@ -77,5 +77,16 @@ from song
 join album using (album_id)
 join artist using (artist_id)
 join time using (song_played_at)
+
+- create table final as 
+select distinct 
+song_played_at ,song_id,song_name, song_duration, song_popularity  ,   
+album_id ,album_name,album_type,album_total_tracks  ,album_release_date  ,
+artist_id , artist_name, artist_type  , song_played_date  ,  
+month , day, week_number,weekday   
+from song
+join album using (album_id)
+join artist using (artist_id)
+join time using (song_played_at)
 ## Step 3: Data Visualization with Quicksight
 
