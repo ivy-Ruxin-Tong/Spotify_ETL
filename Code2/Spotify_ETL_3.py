@@ -207,8 +207,8 @@ class GetRecentlyPlayedSongs:
     
     def connect_to_s3(self):
         client_s3 = boto3.client('s3',
-        aws_access_key_id = 'AKIAV6LCNQOVME6Q4LGJ',
-        aws_secret_access_key = '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')
+        aws_access_key_id = '',
+        aws_secret_access_key = '')
         return client_s3
 
     def load_song_s3(self,songs):
