@@ -12,7 +12,7 @@ Ongoing Project - ETL Process
 - Use AWS Lambds to run python script daily at 5pm
 
 ## Step 2: Query S3 data with AWS Athena
-- Use AWS Athena to query S3 data
+- Use AWS Athena to query S3 data - Total 5 tables
 -   CREATE EXTERNAL TABLE IF NOT EXISTS `test`.`artist` (
   `artist_id` string,
   `artist_name` string,
@@ -66,8 +66,7 @@ WITH SERDEPROPERTIES (
   'field.delim' = ','
 ) LOCATION 's3://spotifyrecord/albums/'
 TBLPROPERTIES ('has_encrypted_data'='false',"skip.header.line.count"="1");
-- 
-create table final as 
+- CREATE TABLE FINAL as 
 select distinct 
 song_played_at ,song_id,song_name, song_duration, song_popularity  ,   
 album_id ,album_name,album_type,album_total_tracks  ,album_release_date  ,
@@ -78,16 +77,8 @@ join album using (album_id)
 join artist using (artist_id)
 join time using (song_played_at)
 
-- create table final as 
-select distinct 
-song_played_at ,song_id,song_name, song_duration, song_popularity  ,   
-album_id ,album_name,album_type,album_total_tracks  ,album_release_date  ,
-artist_id , artist_name, artist_type  , song_played_date  ,  
-month , day, week_number,weekday   
-from song
-join album using (album_id)
-join artist using (artist_id)
-join time using (song_played_at)
+
+
 ## Step 3: Data Visualization with Quicksight
 <img width="891" alt="Screen Shot 2022-05-09 at 20 31 05" src="https://user-images.githubusercontent.com/46492171/167537221-232e4b3b-2bdd-467d-8bd0-035be409c374.png">
 
